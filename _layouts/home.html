@@ -1,0 +1,93 @@
+---
+layout: default
+---
+
+
+<main id="main" class="page-content" aria-label="Content">
+  <div class="index inner">
+
+  <h1>
+    අන්තර්ජාලය නිදහස් කරනු!
+  </h1>
+  <h1>
+    இன்றே இணையத்திற்கு விடுதலையளிப்போம்!
+  </h1>
+  <h1>
+    Free the internet now!
+  </h1>
+<p>
+A community dedicated to ensure robust digital freedoms for the Sri Lankan populous.
+</p>
+<ul style="list-style:none;" >
+<li>
+<a href="https://twitter.com/ifm_sl">
+  <span class="icon">{% include icon-twitter.svg %}</span>
+    TWITTER
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/ifm_sl">
+    <span class="icon">{% include icon-twitter.svg %}</span>
+    ARTICLES ON MEDIUM </a>
+  </li>
+<li>
+  <a href="https://twitter.com/ifm_sl">
+    <span class="icon">{% include icon-facebook.svg %}</span>
+    FACEBOOK GROUP
+</a>
+</li>
+</ul>
+
+
+<br>
+
+    ____________________________________
+
+    <h3> අපි කවුද? </h3>
+
+  <p>    අපි කුමන ආකාරයේ හෝ සීමාකිරීම්/ බාධාවන්ගෙන් තොරව අන්තර්ජාල පරිහරණයට ඇති අයිතිය වෙනුවෙන් පෙනී සිටින පුද්ගලයින්ගේ එකමුතුවක් වෙමු.
+
+අපි වාරණයකින් තොරව තොරතුරු දැනගැනීමේ අයිතිය වෙනුවෙන් ‌පෙනී සිටිමු. නිදහස සහ සමානාත්මතාවය අගය කරමු. වර්ගවාදය ප්‍රතික්ශේප කරමු. එහෙත් කුමන ආකාරයේ හෝ තොරතුරු වාරණයකට එකඟ නොවෙමු.
+</p>
+
+<h3>අපේ අරමුණු</h3>
+  <ul>
+    <li>
+      සීමාකිරීම්/ බාධාවන්ගෙන් තොරව අන්තර්ජාල පරිහරණයට ඇති අයිතිය වෙනුවෙන් පෙනී සිටීම.
+    </li>
+    <li>
+      අන්තර්ජාල වාරණය සහ සීමාකිරීම් පොදුවේ ජන ජීවිතයට බලපාන ආකාරය සොයාබැලීම සහ දැනුවත් කිරීම.
+    </li>
+    <li>
+      අන්තර්ජාල වාරණයකදි හෝ සීමාකිරීමකදි ඒ වෙනුවෙන් සුදුසු පරිදි ක්‍රියාත්මක වීම.
+    </li>
+  </ul>
+<p>
+____________________________________
+</p>
+
+    <div>{{ content }}</div>
+
+    <div>
+      <header class="section-title">
+        <h2>{{ site.data.theme.t.posts | default: 'Posts' }}{% if paginator.page > 1 %}{{ site.data.theme.t.page | default: 'Page' | prepend: ' - ' | append: ' ' }}{{ paginator.page }} {{ site.data.theme.t.of | default: 'of' }} {{ paginator.total_pages }}{% endif %}</h2>
+      </header>
+      <div class="entries">
+        {% if site.plugins contains 'jekyll-paginate' and page.paginate or site.gems contains 'jekyll-paginate' and page.paginate %}
+          {% comment %}
+            Add paginator.posts loop if jekyll-paginate plugin is enabled
+            and page.paginate == true
+          {% endcomment %}
+          {% include posts-paginated.html %}
+        {% else %}
+          {% include posts-all.html %}
+        {% endif %}
+      </div>
+    </div>
+
+{% include disqus_comments.html %}
+
+
+    {% include footer.html %}
+  </div>
+</main>
