@@ -1,4 +1,4 @@
-# ifmwg-lka.github.io
+# fwg-lka.github.io
 IFMSL website. In development
 
 
